@@ -1,0 +1,10 @@
+<launch>
+
+  <node type="stageros" name="stage_sim" pkg="stage_ros" args="-d $(find ros_pa2)/world/playground.world" />
+  <node type="pa2.py" name="pa2" pkg="ros_pa2" output="screen" />
+  <rosparam>
+    goalx: 4.5
+    goaly: 9.0
+  </rosparam>
+ 
+</launch>
